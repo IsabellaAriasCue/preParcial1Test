@@ -52,3 +52,24 @@ def test_promedio_sin_notas():
     estudiante = Estudiante()
 
     assert estudiante.calcular_promedio() == 0
+
+#RF4
+
+def test_no_permitir_materia_duplicada():
+    estudiante = Estudiante()
+
+    estudiante.registrar_nota("Matematicas", "2025-1", 4.0)
+
+    with pytest.raises(NotaDuplicadaError):
+        estudiante.registrar_nota("Matematicas", "2025-1", 3.0)
+
+
+
+def test_permitir_misma_materia_distinto_semestre():
+    estudiante = Estudiante()
+
+    estudiante.registrar_nota("Matematicas", "2025-1", 4.0)
+
+    estudiante.registrar_nota("Matematicas", "2025-2", 3.5)
+
+    assert len(estudiante.notas) == 2
