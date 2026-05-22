@@ -75,4 +75,12 @@ Esta pregunta impacta el diseño de los casos de prueba porque permite definir s
 | CP-11 | RF4 | Registrar misma materia diferente semestre | Nota existente | Matemáticas - 2025-2 | Registrar nota | Registro exitoso | Positivo |
 | CP-12 | RF4 | Registrar materia diferente | Nota existente | Física - 2025-1 | Registrar nota | Registro exitoso | Positivo |
 
+## PARTE 3 — Evidencia TDD
 
+Se implementó cada requerimiento siguiendo el ciclo:
+
+1. RED → creación de tests fallando
+2. GREEN → implementación mínima
+3. REFACTOR → mejora del código
+
+El historial de commits evidencia este proceso.
