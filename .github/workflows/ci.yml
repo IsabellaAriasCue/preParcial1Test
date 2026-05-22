@@ -1,0 +1,33 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+
+  tests:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Clonar repositorio
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Instalar UV
+        run: pip install uv
+
+      - name: Crear entorno virtual
+        run: uv venv
+
+      - name: Instalar dependencias
+        run: uv pip install pytest pytest-cov pytest-bdd
+
+      - name: Ejecutar tests
+        run: uv run pytest --cov=app --cov-fail-under=80
