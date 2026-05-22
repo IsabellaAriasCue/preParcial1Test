@@ -94,3 +94,23 @@ Se implementaron escenarios Gherkin para:
 - Validación de materias duplicadas
 
 Todos los escenarios fueron automatizados mediante pytest-bdd.
+
+## PARTE 5 — Pipeline CI/CD 
+
+Configurado en GitHub Actions para que los tests corran automáticamente en cada push a la rama principal.
+
+---
+
+## PARTE 6 — Reflexión 
+
+
+##### ¿Qué diferencia notaste entre diseñar los casos de prueba en la tabla antes de escribir código versus simplemente ponerte a programar directamente?
+
+- Personalmente yo creo que ayuda a no pasarse cosas importantes por alto y facilita la generación de las pruebas en código ya que al leer los casos de prueba la mente tiene MAYOR facilidad de plasmarlos
+en código debido a la estructura que brinda cada campo de la tabla a la prueba.
+  
+
+##### ¿Qué fue lo más difícil de seguir el ciclo TDD y en qué momento sentiste la tentación de saltarte algún paso?
+
+- Considero que en el **Green**, ya que o veo la necesidad de dejarlo ya "Refactorizado" o no encuentro otra manera diferente de hacer el **green** y cuando 
+paso a **Refactor** no encuentro otra manera de hacerlo.
