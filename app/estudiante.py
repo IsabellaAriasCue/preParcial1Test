@@ -16,3 +16,6 @@ class Estudiante:
             "semestre": semestre,
             "nota": nota
         })
+
+    def aprobo(self, nota):
+        return nota >= 3.0
