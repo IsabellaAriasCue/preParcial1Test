@@ -11,19 +11,26 @@ class Estudiante:
     def __init__(self):
         self.notas = []
 
-    def registrar_nota(self, materia, semestre, nota):
-
-        if nota < self.NOTA_MINIMA or nota > self.NOTA_MAXIMA:
-            raise ValueError("La nota debe estar entre 0.0 y 5.0")
+    def existe_nota(self, materia, semestre):
 
         for registro in self.notas:
             if (
                 registro["materia"] == materia
                 and registro["semestre"] == semestre
             ):
-                raise NotaDuplicadaError(
-                    "La materia ya tiene una nota registrada"
-                )
+                return True
+
+        return False
+
+    def registrar_nota(self, materia, semestre, nota):
+
+        if nota < self.NOTA_MINIMA or nota > self.NOTA_MAXIMA:
+            raise ValueError("La nota debe estar entre 0.0 y 5.0")
+
+        if self.existe_nota(materia, semestre):
+            raise NotaDuplicadaError(
+                "La materia ya tiene una nota registrada"
+            )
 
         self.notas.append({
             "materia": materia,
