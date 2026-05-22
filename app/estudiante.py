@@ -26,9 +26,6 @@ class Estudiante:
         if len(self.notas) == 0:
             return 0
 
-        suma = 0
-
-        for registro in self.notas:
-            suma += registro["nota"]
+        suma = sum(registro["nota"] for registro in self.notas)
 
         return suma / len(self.notas)
