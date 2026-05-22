@@ -58,5 +58,20 @@ Justificación:
 Esta pregunta impacta el diseño de los casos de prueba porque permite definir si la validación de duplicados debe hacerse 
 únicamente por materia o por la combinación de materia y semestre.
 
-
 ---
+## PARTE 2 — Diseño de casos de prueba
+| ID | Requerimiento | Descripción | Precondición | Datos de entrada | Pasos | Resultado esperado | Tipo |
+|---|---|---|---|---|---|---|---|
+| CP-01 | RF1 | Registrar nota válida | Estudiante creado | 4.0 | Registrar nota | Registro exitoso | Positivo |
+| CP-02 | RF1 | Registrar nota negativa | Estudiante creado | -1.0 | Registrar nota | Error | Negativo |
+| CP-03 | RF1 | Registrar nota límite 5.0 | Estudiante creado | 5.0 | Registrar nota | Registro exitoso | Borde |
+| CP-04 | RF2 | Aprobar con 3.0 | Nota registrada | 3.0 | Consultar estado | Aprueba | Borde |
+| CP-05 | RF2 | Reprobar con 2.9 | Nota registrada | 2.9 | Consultar estado | Reprueba | Borde |
+| CP-06 | RF2 | Aprobar con 4.5 | Nota registrada | 4.5 | Consultar estado | Aprueba | Positivo |
+| CP-07 | RF3 | Calcular promedio | Varias notas registradas | 3.0, 4.0 | Calcular promedio | 3.5 | Positivo |
+| CP-08 | RF3 | Promedio sin notas | Sin notas | Ninguna | Calcular promedio | 0 | Negativo |
+| CP-09 | RF3 | Promedio con una nota | Nota registrada | 5.0 | Calcular promedio | 5.0 | Positivo |
+| CP-10 | RF4 | Duplicar materia mismo semestre | Nota existente | Matemáticas - 2025-1 | Registrar nuevamente | Error | Negativo |
+| CP-11 | RF4 | Registrar misma materia diferente semestre | Nota existente | Matemáticas - 2025-2 | Registrar nota | Registro exitoso | Positivo |
+| CP-12 | RF4 | Registrar materia diferente | Nota existente | Física - 2025-1 | Registrar nota | Registro exitoso | Positivo |
+
