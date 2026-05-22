@@ -84,3 +84,13 @@ Se implementó cada requerimiento siguiendo el ciclo:
 3. REFACTOR → mejora del código
 
 El historial de commits evidencia este proceso.
+
+## PARTE 4 — BDD
+
+Se implementaron escenarios Gherkin para:
+
+- Aprobación y reprobación
+- Cálculo de promedio
+- Validación de materias duplicadas
+
+Todos los escenarios fueron automatizados mediante pytest-bdd.
