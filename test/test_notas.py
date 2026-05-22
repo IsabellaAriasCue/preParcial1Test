@@ -35,3 +35,20 @@ def test_reprueba_con_nota_menor_a_tres():
     estudiante = Estudiante()
 
     assert estudiante.aprobo(2.9) is False
+
+#RF3
+
+def test_calcular_promedio():
+    estudiante = Estudiante()
+
+    estudiante.registrar_nota("Matematicas", "2025-1", 3.0)
+    estudiante.registrar_nota("Fisica", "2025-1", 5.0)
+
+    assert estudiante.calcular_promedio() == 4.0
+
+
+
+def test_promedio_sin_notas():
+    estudiante = Estudiante()
+
+    assert estudiante.calcular_promedio() == 0
