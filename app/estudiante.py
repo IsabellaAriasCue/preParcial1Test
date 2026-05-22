@@ -2,6 +2,7 @@ class Estudiante:
 
     NOTA_MINIMA = 0.0
     NOTA_MAXIMA = 5.0
+    NOTA_APROBACION = 3.0
 
     def __init__(self):
         self.notas = []
@@ -18,4 +19,4 @@ class Estudiante:
         })
 
     def aprobo(self, nota):
-        return nota >= 3.0
+        return nota >= self.NOTA_APROBACION
