@@ -29,7 +29,7 @@ Se eligió Python porque es el lenguaje que actualmente más se me facilita.
 | Inválida menor    < 0 | Menor a 0.0 | -1.0 | Error de validación |
 | Inválida mayor     > 5 | Mayor a 5.0 | 5.5 | Error de validación |
 
-## 1.2 Análisis de valores límite
+## 1.2 - Análisis de valores límite
 
 | Valor | Dentro/Fuera | Resultado esperado |
 |---|---|---|
@@ -42,5 +42,21 @@ Se eligió Python porque es el lenguaje que actualmente más se me facilita.
 | 4.9 | Dentro | Registro exitoso |
 | 5.0 | Dentro | Registro exitoso |
 | 5.1 | Fuera | Error |
+
+## 1.3 — Preguntas al Product Owner
+
+### Pregunta 1
+¿La validación de duplicados debe tener en cuenta diferencias entre mayúsculas y minúsculas?
+
+Justificación:
+Esto afecta los casos de prueba relacionados con materias como “Programación” y “programación”.
+
+### Pregunta 2
+¿El estudiante puede registrar nuevamente una nota de la misma materia si ya se encuentra en otro semestre?
+
+Justificación:
+Esta pregunta impacta el diseño de los casos de prueba porque permite definir si la validación de duplicados debe hacerse 
+únicamente por materia o por la combinación de materia y semestre.
+
 
 ---
