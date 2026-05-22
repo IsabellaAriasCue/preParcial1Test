@@ -20,3 +20,15 @@ class Estudiante:
 
     def aprobo(self, nota):
         return nota >= self.NOTA_APROBACION
+
+    def calcular_promedio(self):
+
+        if len(self.notas) == 0:
+            return 0
+
+        suma = 0
+
+        for registro in self.notas:
+            suma += registro["nota"]
+
+        return suma / len(self.notas)
