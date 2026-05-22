@@ -1,6 +1,6 @@
 import pytest
 
-from app.estudiante import Estudiante
+from app.estudiante import Estudiante, NotaDuplicadaError
 
 
 def test_registrar_nota_valida():

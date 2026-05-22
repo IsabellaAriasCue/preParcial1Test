@@ -1,3 +1,7 @@
+class NotaDuplicadaError(Exception):
+    pass
+
+
 class Estudiante:
 
     NOTA_MINIMA = 0.0
@@ -11,6 +15,15 @@ class Estudiante:
 
         if nota < self.NOTA_MINIMA or nota > self.NOTA_MAXIMA:
             raise ValueError("La nota debe estar entre 0.0 y 5.0")
+
+        for registro in self.notas:
+            if (
+                registro["materia"] == materia
+                and registro["semestre"] == semestre
+            ):
+                raise NotaDuplicadaError(
+                    "La materia ya tiene una nota registrada"
+                )
 
         self.notas.append({
             "materia": materia,
